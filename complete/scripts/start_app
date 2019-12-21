@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo 'Starting my app'
+cd '/var/www/html/'
+java -jar gs-spring-boot-0.1.0.jar
