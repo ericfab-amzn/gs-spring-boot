@@ -16,6 +16,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - ls 
 artifacts:
   files:
-    - target/gs-spring-boot-0.1.0.jar
+    - complete/target/gs-spring-boot-0.1.0.jar
