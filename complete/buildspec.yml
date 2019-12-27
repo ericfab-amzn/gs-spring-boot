@@ -21,4 +21,5 @@ artifacts:
   files:
     - complete/target/gs-spring-boot-0.1.0.jar
     - complete/scripts/*
+    - complete/appspec.yml
   discard-paths: yes
