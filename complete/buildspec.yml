@@ -23,3 +23,11 @@ artifacts:
     - complete/scripts/*
     - complete/appspec.yml
   discard-paths: yes
+reports:
+  Java-Spring-Report: #surefire junit reports
+   commands:
+    - echo "Runnings tests..."
+    - mvn -f complete/pom.xml integration-test
+   files:
+    - '**/*'
+   base-directory: 'complete/target/failsafe-reports'
