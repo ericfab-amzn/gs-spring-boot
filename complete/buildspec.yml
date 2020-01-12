@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - cd complete
-      - mvn package
+      - mvn package -Dmaven.test.skip=true
       #- mvn install -e
   post_build:
     commands:
