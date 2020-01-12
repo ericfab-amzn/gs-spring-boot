@@ -32,4 +32,4 @@ reports:
       - mvn -f pom.xml integration-test
     files:
       - '**/*'
-    base-directory: 'complete/target/failsafe-reports'
+    base-directory: 'target/failsafe-reports'
