@@ -17,7 +17,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - ls
-      - mvn -f complete/pom.xml integration-test
+      - mvn -f pom.xml integration-test
 artifacts:
   files:
     - complete/target/gs-spring-boot-0.1.0.jar
