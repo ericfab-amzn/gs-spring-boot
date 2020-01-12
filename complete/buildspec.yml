@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - ls
-      #- mvn -f pom.xml integration-test
+      - mvn -f pom.xml integration-test
 artifacts:
   files:
     - complete/target/gs-spring-boot-0.1.0.jar
@@ -27,9 +27,9 @@ artifacts:
   discard-paths: yes
 reports:
   Java-Spring-Report: #surefire junit reports
-    commands:
-      - echo "Runnings tests..."
-      - mvn -f pom.xml integration-test
+    #commands:
+      #- echo "Runnings tests..."
+      #- mvn -f pom.xml integration-test
     files:
       - '**/*'
     base-directory: 'target/failsafe-reports'
