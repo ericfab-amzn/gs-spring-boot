@@ -36,4 +36,4 @@ reports:
       #- mvn -f pom.xml integration-test
     files:
       - '**/*'
-    base-directory: 'target/surefire-reports'
+    base-directory: 'complete/target/surefire-reports'
