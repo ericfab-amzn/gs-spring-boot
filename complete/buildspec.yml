@@ -18,7 +18,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - ls
-      - mvn -f pom.xml integration-test
+      - mvn surefire-report:report
+      #- mvn -f pom.xml integration-test
 artifacts:
   files:
     - complete/target/gs-spring-boot-0.1.0.jar
@@ -32,4 +33,4 @@ reports:
       #- mvn -f pom.xml integration-test
     files:
       - '**/*'
-    base-directory: 'target/failsafe-reports'
+    base-directory: 'target/surefire-reports'
