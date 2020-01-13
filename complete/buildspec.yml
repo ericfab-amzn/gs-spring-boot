@@ -20,12 +20,12 @@ phases:
       - ls
       - mvn surefire-report:report
       #- mvn -f pom.xml integration-test
-artifacts:
-  files:
-    - complete/target/gs-spring-boot-0.1.0.jar
-    - complete/scripts/*
-    - complete/appspec.yml
-  discard-paths: yes
+#artifacts:
+#  files:
+#    - complete/target/gs-spring-boot-0.1.0.jar
+#    - complete/scripts/*
+#    - complete/appspec.yml
+#  discard-paths: yes
 reports:
   Java-Spring-Report: #surefire junit reports
     #commands:
