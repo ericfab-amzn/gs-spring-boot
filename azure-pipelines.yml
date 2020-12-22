@@ -12,7 +12,7 @@ pool:
 stages:
 - stage: build_stage
   jobs:
-  - job: building
+  - job: building_maven
     steps:
     - task: Maven@3
       inputs:
@@ -28,18 +28,13 @@ stages:
         effectivePomSkip: false
         sonarQubeRunAnalysis: true
         sqMavenPluginVersionChoice: 'latest'
-  - job: building_again
+  - job: building_gradle
     steps:
-    - task: Maven@3
+    - task: Gradle@2
       inputs:
-        mavenPomFile: 'complete/pom.xml'
-        options: '-X'
-        publishJUnitResults: true
-        testResultsFiles: '**/surefire-reports/TEST-*.xml'
-        javaHomeOption: 'JDKVersion'
-        jdkVersionOption: '1.8'
-        mavenVersionOption: 'Default'
-        mavenOptions: '-Xmx3072m'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
-        sonarQubeRunAnalysis: false
+       gradleWrapperFile: 'complete/gradlew'
+       tasks: 'build'
+       publishJUnitResults: true
+       testResultsFiles: '**/TEST-*.xml'
+       javaHomeOption: 'JDKVersion'
+       sonarQubeRunAnalysis: false
